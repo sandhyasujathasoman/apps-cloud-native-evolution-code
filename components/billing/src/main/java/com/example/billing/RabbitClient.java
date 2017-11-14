@@ -11,7 +11,6 @@ public class RabbitClient implements Client {
         this.rabbitTemplate = rabbitTemplate;
     }
 
-    @Override
     public void billUser(String userId, int amount) {
         rabbitTemplate.convertAndSend(queueName, new BillingMessage(userId, amount));
     }

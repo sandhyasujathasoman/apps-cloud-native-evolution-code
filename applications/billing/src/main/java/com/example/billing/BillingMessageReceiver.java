@@ -25,10 +25,10 @@ public class BillingMessageReceiver {
         // you may want to move this conditional logic into another method/function since it is now
         // duplicated between the controller and this class. unfortunately there really isn't
         // enough code to know for sure right now.
-        if (paymentGateway.createReocurringPayment(amount)){
-            System.out.println("Successfully created payment for <" + amount + ">");
-        } else {
-            System.out.println("Creating payment for <" + amount + "> failed.");
-        }
+//        if (paymentGateway.createReocurringPayment(amount)){
+//            System.out.println("Successfully created payment for <" + amount + ">");
+//        } else {
+//            System.out.println("Creating payment for <" + amount + "> failed.");
+//        }
     }
 }

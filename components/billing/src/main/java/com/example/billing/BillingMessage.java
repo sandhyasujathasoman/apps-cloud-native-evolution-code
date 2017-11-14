@@ -1,24 +1,34 @@
 package com.example.billing;
 
-// By keeping this package private, we don't allow it to leak out into other applications.
-
 import java.io.Serializable;
 
-class BillingMessage implements Serializable {
+public class BillingMessage implements Serializable {
 
-    private final String userId;
-    private final int amount;
-
-    public BillingMessage(String userId, int amount) {
-        this.userId = userId;
-        this.amount = amount;
-    }
-
-    public String getUserId() {
-        return userId;
-    }
-
-    public int getAmount() {
-        return amount;
-    }
+	
+	public BillingMessage(String userId, int amount) {
+		super();
+		this.userId = userId;
+		this.amount = amount;
+	}
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private String userId;
+	private int amount;
+	
+	
+	
+	public String getUserId() {
+		return userId;
+	}
+	public void setUserId(String userId) {
+		this.userId = userId;
+	}
+	public int getAmount() {
+		return amount;
+	}
+	public void setAmount(int amount) {
+		this.amount = amount;
+	}
 }

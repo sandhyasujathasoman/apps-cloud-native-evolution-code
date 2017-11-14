@@ -1,13 +1,15 @@
 package com.example.billing;
 
-import com.example.payments.Gateway;
-import com.example.payments.RecurlyGateway;
 import org.springframework.amqp.core.Queue;
+import org.springframework.amqp.rabbit.listener.adapter.MessageListenerAdapter;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
 import org.springframework.context.annotation.Bean;
+
+import com.example.payments.Gateway;
+import com.example.payments.RecurlyGateway;
 
 @SpringBootApplication
 @EnableCircuitBreaker
@@ -16,6 +18,11 @@ public class BillingApplication {
     @Bean
     BillingMessageReceiver receiver(Gateway paymentGateway) {
         return new BillingMessageReceiver(paymentGateway);
+    }
+    
+    @Bean
+    MessageListenerAdapter listener(BillingMessageReceiver receiver) {
+    	return new MessageListenerAdapter(receiver, "process");
     }
 
     // The consumer owns the queue and should be started before the producer.

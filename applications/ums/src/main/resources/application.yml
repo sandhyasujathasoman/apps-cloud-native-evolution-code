@@ -1,8 +1,8 @@
-server:
-  port: 8080
+server.port: 8080
+spring.application.name: ums
 
-spring:
-  application:
-    name: ums
-
-billingQueueName: billing-queue
+security:
+   basic:
+    enabled: false
+    
+queueName: billing-queue

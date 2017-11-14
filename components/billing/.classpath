@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src/main/java"/>
+	<classpathentry exported="true" kind="lib" path="/Users/sandhya/.gradle/caches/modules-2/files-2.1/org.springframework/spring-web/4.3.12.RELEASE/86c29588cca74d0fc848b194cb13fcdfd12bc990/spring-web-4.3.12.RELEASE.jar" sourcepath="/Users/sandhya/.gradle/caches/modules-2/files-2.1/org.springframework/spring-web/4.3.12.RELEASE/4c8e2f1d4d02bdda3e1f598cb2fedc0537d1efdd/spring-web-4.3.12.RELEASE-sources.jar"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry exported="true" kind="con" path="org.springsource.ide.eclipse.gradle.classpathcontainer"/>
+	<classpathentry exported="true" kind="lib" path="/Users/sandhya/.gradle/caches/modules-2/files-2.1/com.netflix.hystrix/hystrix-javanica/1.5.6/30021dfce13361226271ae692037e25f7942c0a4/hystrix-javanica-1.5.6.jar" sourcepath="/Users/sandhya/.gradle/caches/modules-2/files-2.1/com.netflix.hystrix/hystrix-javanica/1.5.6/a144e1f973e61c10f28a4c0b132b04e3df68f711/hystrix-javanica-1.5.6-sources.jar"/>
+	<classpathentry exported="true" kind="lib" path="/Users/sandhya/.gradle/caches/modules-2/files-2.1/org.springframework.amqp/spring-rabbit/1.6.5.RELEASE/233c5fbb2a7adb5b24da874b65794f08445a1ebe/spring-rabbit-1.6.5.RELEASE.jar" sourcepath="/Users/sandhya/.gradle/caches/modules-2/files-2.1/org.springframework.amqp/spring-rabbit/1.6.5.RELEASE/c8d3ef60c7e364083551b4811a69567a5a8701d5/spring-rabbit-1.6.5.RELEASE-sources.jar"/>
+	<classpathentry kind="src" path="/applications.billing"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

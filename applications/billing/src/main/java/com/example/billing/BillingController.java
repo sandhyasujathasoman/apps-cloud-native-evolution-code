@@ -8,7 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-public class Controller {
+public class BillingController {
     @Autowired
     private com.example.payments.Gateway paymentGateway;
 
@@ -16,7 +16,7 @@ public class Controller {
     public ResponseEntity<String> createReocurringPayment(@RequestBody int amount){
         HttpHeaders responseHeaders = new HttpHeaders();
         responseHeaders.add("content-type", MediaType.APPLICATION_JSON.toString());
-
+        System.out.println("Inside billing controller$$$$$$$$");
         ResponseEntity<String> response;
         if (paymentGateway.createReocurringPayment(amount)) {
             response = new ResponseEntity<>("{errors: []}", responseHeaders, HttpStatus.CREATED);
